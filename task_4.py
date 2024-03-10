@@ -22,7 +22,7 @@ def prepared_users(users):
         except ValueError:
             # Виводимо повідомлення про помилку
            print(f'Некоректна дата народження для користувача {user["name"]}')
-    return prepared_users
+    return formated_users
 
 
 def find_next_weekday(d, weekday: int):
@@ -63,7 +63,8 @@ def get_upcoming_birthdays(prepared_users):
             "name": user["name"],
             "congratulation_date": congratulation_date_str
         })
-    return get_upcoming_birthdays
+    return upcoming_birthdays
 
-
-print(get_upcoming_birthdays)
+formatted_users = prepared_users(users)
+upcoming_birthdays = get_upcoming_birthdays(formatted_users)
+print(upcoming_birthdays)
