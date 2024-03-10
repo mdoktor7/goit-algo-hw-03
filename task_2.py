@@ -1,7 +1,7 @@
 import random
 
 def get_numbers_ticket(min, max, quantity):
-    if min >= 1 and max <= 1000 and min <= quantity <= max:
+    if min >= 1 and max <= 1000 and 0 < quantity <= max - min + 1:
         numbers_ticket = set()
         while len(numbers_ticket) < quantity:
             numbers_ticket.add(random.randint(min, max))
