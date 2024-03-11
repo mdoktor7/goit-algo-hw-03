@@ -16,7 +16,7 @@ def get_days_from_today():
 
             return days_from_today
         except ValueError:
-            print(f"Please input date {date} in format Year-Month-Day")
+            print(f"Please enter the date {date} in format Year-Month-Day")
 
 
 get_days_from_today()
